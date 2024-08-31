@@ -4,12 +4,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import java.util.logging.Logger;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
         borrar=(Button) findViewById(R.id.borrar);
         guardar=(Button) findViewById(R.id.guardar);
 
+        tvGuardaDatos=(TextView) findViewById(R.id.tvGuardaDatos);
+        textFront=(TextView) findViewById(R.id.textFront);
+
+
         guardar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view){
                 String name = etNombre.getText().toString();
@@ -46,10 +53,19 @@ public class MainActivity extends AppCompatActivity {
                 String career = etCarrera.getText().toString();
                 String subject = etMateria.getText().toString();
 
-                System.out.print("el nombre es: " + name + "\n");
-                System.out.print("la escuela es: " + school + "\n");
-                System.out.print("el carrera es: " + career + "\n");
-                System.out.print("la materia es: " + subject + "\n");
+                Logger.getLogger("el nombre es: " + name + "\n");
+                Logger.getLogger("la escuela es: " + school + "\n");
+                Logger.getLogger("el carrera es: " + career + "\n");
+                Logger.getLogger("la materia es: " + subject + "\n");
+
+                tvGuardaDatos.setVisibility(View.VISIBLE);
+
+                System.out.println("");
+                System.out.println("");System.out.println("");
+                System.out.println("");
+
+                textFront.setText("Nuestras alma mater "+ school+ "le da la más cordial bienvenida "
+                        + "correspondiente a la carrera de "+ career +"en la materia de "+ subject);
 
             }
 

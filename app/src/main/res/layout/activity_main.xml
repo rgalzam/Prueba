@@ -77,25 +77,18 @@
 
         <RelativeLayout
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/borrar"
-                android:layout_width="150dp"
-                android:layout_height="48dp"
-                android:onClick="Borrar"
-                android:text="borrar" />
+            android:layout_centerVertical="true">
 
 
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_height="match_parent">
+            android:layout_centerVertical="true">
 
             <Button
                 android:id="@+id/guardar"
@@ -106,6 +99,36 @@
 
 
         </RelativeLayout>
+
+        <Button
+            android:id="@+id/borrar"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:onClick="Borrar"
+            android:text="borrar" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvGuardaDatos"
+        android:layout_width="394dp"
+        android:layout_height="224dp"
+        android:text=""
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="415dp" />
+
+    <LinearLayout
+        android:layout_width="412dp"
+        android:layout_height="310dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="421dp">
+
+        <TextView
+            android:id="@+id/textFront"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
     </LinearLayout>
 
 
