@@ -23,6 +23,10 @@ public class MainActivity extends AppCompatActivity {
     private Button borrar;
     private Button guardar;
 
+    private TextView tvGuardaDatos;
+
+    private TextView textFront;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
